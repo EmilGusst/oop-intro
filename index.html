@@ -1,0 +1,71 @@
+<html>
+
+    <head>
+        <script>
+            
+            // Skapar klasskonstruktor
+            function Warrior(name, hp, strength){
+        
+            this.name = name;
+            this.hp = hp;
+            this.strength = strength;
+            console.log("En krigare är född. Han ska heta " + this.name + ". Han har hp " + this.hp +  ". Hans strengt är " + this.strength);
+        
+                
+            }
+            
+            //Metod för skada
+            Warrior.prototype.hurt = function(damage){
+                
+                
+                this.hp = this.hp - damage;
+                console.log(this.name +" skadar sig och blöder mycket. Han förlorar  " + damage + " hp och har nu kvar " + this.hp + " hp. ");
+                
+            }
+            
+            
+            //Metod för skada
+            Warrior.prototype.attack = function(opponent){
+                
+                console.log(this.name + " attackerar " + opponent.name + ". ");
+                opponent.hurt (this.strength);
+                
+                
+            }
+            
+        
+            
+            
+            //Instantiera flrea objekt av klassen Warrior
+            var warriors = [new Warrior("Shurki", 100, 12), new Warrior("Köken", 20, 2), new Warrior("BK", 50, 100 )];
+            
+            
+            
+             warriors[2].attack(warriors[0]);
+            
+            
+            if( this.hp = 0){
+             this.name + "Dog"   
+                
+            }
+          
+            
+            
+            
+            
+            
+            
+            
+            
+        </script>
+    </head>
+
+    <body>
+
+
+
+
+
+    </body>
+
+</html>
